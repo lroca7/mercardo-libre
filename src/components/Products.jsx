@@ -6,7 +6,7 @@ import './Products.scss'
 import { useHistory } from "react-router-dom";
 
 
-const API = 'https://api.mercadolibre.com/sites/MLA/search?q=iphone'
+const API = 'https://api.mercadolibre.com/sites/MLA/search'
 
 const Products = (props) => {
 
@@ -18,10 +18,14 @@ const Products = (props) => {
   const searchInput = useRef(null);
 
   useEffect(() => {
-    debugger
-    fetch(API)
+    const query = history.location.search;
+    const url = API + query
+    if(query) {
+      fetch(url)
       .then((response) => response.json())
       .then((data) => setCharacters(data.results));
+    }
+    
   }, []);
 
 
@@ -35,7 +39,7 @@ const Products = (props) => {
   })
 
   const handleDetailProduct = (product) => {
-     history.push(`items/${product.id}`);
+     history.push(`/items/${product.id}`);
   }
 
 
@@ -50,7 +54,6 @@ const Products = (props) => {
       </div> */}
       
       <div className="products">
-        PRODUCTOS AQUI
         {filteredUsers.map((product) => (
           <div key={product.id} className="card" onClick={() => handleDetailProduct(product)}>
             <img src={product.thumbnail} alt="product_logo" />

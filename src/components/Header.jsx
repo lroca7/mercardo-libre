@@ -25,11 +25,11 @@ const Header = (props) => {
   };
 
   const handleSearch = (event) => {
-    debugger
-    // fetch(API+search)
-    //   .then((response) => response.json())
-    //   .then((data) => setCharacters(data.results));
-    history.push(`search`);
+    history.push({
+      pathname: '/items/search',
+      search: '?q='+search,
+      // state: { detail: 'some_value' }
+  });
   };
 
   const goHome = () => {

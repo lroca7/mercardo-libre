@@ -72,3 +72,20 @@
   margin: 0 10px;
 
 }
+
+.detail-product {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  img {
+    width: 680px;
+  }
+
+  .info-product {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

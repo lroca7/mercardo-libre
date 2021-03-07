@@ -17,9 +17,13 @@ const DetailProduct = (props) => {
   return (
     <>
     <div className="detail-product">
-      <h2>{product.title}</h2>
-      <h1>$ {product.price}</h1>
-      <button class="btn-buy">Comprar</button>
+      <img src={product.thumbnail} alt="product_logo" />
+      <div className="info-product">
+        <h2>{product.title}</h2>
+        <h1>$ {product.price}</h1>
+        <button class="btn-buy">Comprar</button>
+      </div>
+     
     </div>
     </>
   );
