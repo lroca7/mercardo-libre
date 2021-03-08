@@ -44,7 +44,7 @@
 
 
 .top {
-  background: yellow;
+  background: #FFE600;
   height: 55px;
   display: flex;
   justify-content: center;
@@ -74,19 +74,38 @@
 
 }
 
-.detail-product {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  img {
-    width: 680px;
-  }
+.product {
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: flex-start;
+  // text-align: left;
+  // img {
+  //   width: 680px;
+  // }
+
+
 
   .info-product {
-    width: 250px;
+    
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    
+    flex-direction: revert;
+
+    img {
+      width: 680px;
+    }
+
+    .detail-product {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      justify-content: flex-start;
+    }    
+  }
+
+  .product-description {
+    margin-left: 5%;
+    width: 680px;
+    text-align: left;
   }
 }
