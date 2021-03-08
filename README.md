@@ -4,11 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Run Backend
 
-### `cd backml`
-### `node index.js`
+ `cd backml`
+ `node index.js`
 
 
 ## Run Frontend
 
-### `cd webapp`
-### `npm start`
+ `cd webapp`
+ `npm start`
